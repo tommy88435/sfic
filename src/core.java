@@ -63,14 +63,24 @@ public class core {
 		
 	}
 	
-	public void setGrandmaster() {
+	public void setGrandmaster() throws Exception{
+		try {
 		for(int i = 0 ; i <= grandmaster.length-1; i++) {
 			System.out.println("Please enter key cut " + (i+1));
-			grandmaster[i] = scan.nextInt();
+			this.grandmaster[i] = scan.nextInt();
 		} 
 		
-		System.out.println("Grandmaster key cuts succesfully generated");
+		//System.out.println("Grandmaster key cuts succesfully generated");
+		}
+		
+		catch(java.util.InputMismatchException e) {
+			System.out.println("Please enter a number");
+			
+		}
 	}
+	
+		
+	
 	
 	public void setControl() {
 		for(int i = 0 ; i <= control.length-1; i++) {
