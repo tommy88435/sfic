@@ -81,20 +81,30 @@ public class core {
 	
 		
 	
-	
 	public void setControl() {
-		for(int i = 0 ; i <= control.length-1; i++) {
-			System.out.println("Please enter key cut " + (i+1));
-			control[i] = scan.nextInt();
+		try {
+			for(int i = 0 ; i <= control.length-1; i++) {
+				System.out.println("Please enter key cut " + (i+1));
+				control[i] = scan.nextInt();
+			}
+		} 
+		catch (java.util.InputMismatchException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Please enter a number");
 		} 
 		
 		System.out.println("Control key cuts succesfully generated");
 	}
 	
-	public void setOperating() {
-		for(int i = 0 ; i <= operating.length-1; i++) {
-			System.out.println("Please enter key cut " + (i+1));
-			operating[i] = scan.nextInt();
+	public void setOperating() throws Exception{
+		try {
+			for(int i = 0 ; i <= operating.length-1; i++) {
+				System.out.println("Please enter key cut " + (i+1));
+				operating[i] = scan.nextInt();
+			}
+		} catch (java.util.InputMismatchException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Please enter a number");
 		} 
 		
 		System.out.println("Operating key cuts succesfully generated");

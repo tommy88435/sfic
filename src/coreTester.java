@@ -9,7 +9,7 @@ public class coreTester {
 		
 		try {
 			c1.setGrandmaster();
-			c2.setGrandmaster();
+			//c2.setGrandmaster();
 		} 
 		
 		catch (Exception e) {
@@ -17,8 +17,9 @@ public class coreTester {
 			e.printStackTrace();
 		}
 		
-		System.out.println(Arrays.toString(c1.getGrandmaster()));
-		System.out.println(Arrays.toString(c2.getGrandmaster()));
+		
+		System.out.println(c1.getCoreMark() + " " + Arrays.toString(c1.getGrandmaster()));
+		//System.out.println(Arrays.toString(c2.getGrandmaster()));
 		
 
 	}
